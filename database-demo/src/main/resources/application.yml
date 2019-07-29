@@ -1,0 +1,16 @@
+mybatis:
+  mapper-locations: classpath:mapping/*.xml
+server:
+  port: 8090
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    name: database-demo
+    password: sjf123456
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://127.0.0.1:3306/database_demo?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&useSSL=false
+    username: sjf10050
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: update

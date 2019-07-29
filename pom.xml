@@ -18,7 +18,11 @@
     <properties>
         <java.version>12</java.version>
     </properties>
-
+    <modules>
+        <module>mq-receiver</module>
+        <module>mq-sender</module>
+        <module>database-demo</module>
+    </modules>
     <dependencyManagement>
         <dependencies>
 
@@ -29,11 +33,23 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-
+            <!-- https://mvnrepository.com/artifact/org.mybatis.spring.boot/mybatis-spring-boot-starter -->
             <dependency>
-                <groupId>com.unicom</groupId>
-                <artifactId>learning-demo</artifactId>
-                <version>0.0.1-SNAPSHOT</version>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>2.1.0</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/org.mybatis.generator/mybatis-generator-core -->
+            <dependency>
+                <groupId>org.mybatis.generator</groupId>
+                <artifactId>mybatis-generator-core</artifactId>
+                <version>1.3.7</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/com.alibaba/druid-spring-boot-starter -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>1.1.18</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
