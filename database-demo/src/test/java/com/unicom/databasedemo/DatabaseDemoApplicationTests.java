@@ -25,5 +25,7 @@ public class DatabaseDemoApplicationTests {
         user.setUsername("sjf");
         user.setAddress("SH");
         userDao.save(user);
+        Integer id=1;
+        userDao.modifyName("fdhsafdsa",id);
     }
 }

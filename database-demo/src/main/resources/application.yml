@@ -14,3 +14,4 @@ spring:
     open-in-view: false
     hibernate:
       ddl-auto: update
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
