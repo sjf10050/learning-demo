@@ -22,6 +22,7 @@
         <module>mq-receiver</module>
         <module>mq-sender</module>
         <module>database-demo</module>
+        <module>coap-client</module>
     </modules>
     <dependencyManagement>
         <dependencies>
@@ -50,6 +51,18 @@
                 <groupId>com.alibaba</groupId>
                 <artifactId>druid-spring-boot-starter</artifactId>
                 <version>1.1.18</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/org.eclipse.californium/californium-core -->
+            <dependency>
+                <groupId>org.eclipse.californium</groupId>
+                <artifactId>californium-core</artifactId>
+                <version>2.0.0-M16</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/org.eclipse.californium/element-connector -->
+            <dependency>
+                <groupId>org.eclipse.californium</groupId>
+                <artifactId>element-connector</artifactId>
+                <version>2.0.0-M16</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

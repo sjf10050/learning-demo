@@ -6,9 +6,13 @@ import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 public interface UserDao extends JpaRepository<User, Integer> {
     @Transactional
     @Modifying
-    @Query("update user set username=?1 where id=?2")
-    public int modifyName(String name,Integer id);
+    @Query("update User u set u.address = ?1 where u.userId = ?2")
+    int setAddressForUser(String address, Integer userId);
+
+    List<User> findUsersByAddressEquals(String address);
 }

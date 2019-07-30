@@ -6,6 +6,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.domain.Example;
 import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
@@ -25,7 +26,13 @@ public class DatabaseDemoApplicationTests {
         user.setUsername("sjf");
         user.setAddress("SH");
         userDao.save(user);
-        Integer id=1;
-        userDao.modifyName("fdhsafdsa",id);
+        userDao.setAddressForUser("fdhsafdsa", 1);
+       // System.out.println(userDao.findUsersByAddressEquals("SH"));
+    }
+
+    @Test
+    public void testExample() {
+        Example<User> userExample = Example.of(new User());
+//        userExample.
     }
 }
