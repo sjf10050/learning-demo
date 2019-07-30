@@ -23,6 +23,7 @@
         <module>mq-sender</module>
         <module>database-demo</module>
         <module>coap-client</module>
+        <module>java12-language-demo</module>
     </modules>
     <dependencyManagement>
         <dependencies>
