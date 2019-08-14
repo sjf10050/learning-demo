@@ -1,0 +1,14 @@
+server:
+  port: 0 #use radom port
+spring:
+  datasource:
+    url: jdbc:postgresql://127.0.0.1:5432/sjf10050
+    username: sjf10050
+    password: sjf123456
+    driver-class-name: org.postgresql.Driver
+
+  data:
+    mongodb:
+      uri: mongodb://sjf10050:sjf123456@127.0.0.1:27017
+      database: test
+      authentication-database: admin
