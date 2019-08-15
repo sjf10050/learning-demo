@@ -1,6 +1,7 @@
 package com.unicom.demopostgresql.dao;
 
 import com.unicom.demopostgresql.entity.UserEntity;
+import com.unicom.demopostgresql.entity.dao.UserMongoRepositroy;
 import com.unicom.demopostgresql.entity.dao.UserRepository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -13,6 +14,8 @@ import org.springframework.test.context.junit4.SpringRunner;
 public class UserDaoTest {
     @Autowired
     private UserRepository useRepository;
+    @Autowired
+    private UserMongoRepositroy userMongoRepositroy;
 
     @Test
     public void testSaveUser() {
@@ -41,5 +44,17 @@ public class UserDaoTest {
     @Test
     public void deleteUserById() {
         useRepository.deleteUserById(1l);
+    }
+
+    @Test
+    public void addUser() {
+        for (int i = 0; i < 100; i++) {
+            UserEntity user = new UserEntity();
+            user.setId(0L+i);
+            user.setUserName("name "+i);
+            user.setPassWord("pass");
+            userMongoRepositroy.insert(user);
+        }
+
     }
 }
