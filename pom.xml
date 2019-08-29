@@ -17,7 +17,10 @@
 
     <properties>
         <java.version>12</java.version>
-        <leshan.version></leshan.version>
+        <leshan.version>1.0.0-M12</leshan.version>
+        <spring-cloud.version>Greenwich.RELEASE</spring-cloud.version>
+        <scala.version>2.13</scala.version>
+        <akka.version>2.6.0-M6</akka.version>
     </properties>
     <modules>
         <module>mq-receiver</module>
@@ -70,13 +73,13 @@
             <dependency>
                 <groupId>org.eclipse.leshan</groupId>
                 <artifactId>leshan-server-cf</artifactId>
-                <version>1.0.0-M11</version>
+                <version>${leshan.version}</version>
             </dependency>
             <!-- https://mvnrepository.com/artifact/org.eclipse.leshan/leshan-client-cf -->
             <dependency>
                 <groupId>org.eclipse.leshan</groupId>
                 <artifactId>leshan-client-cf</artifactId>
-                <version>1.0.0-M11</version>
+                <version>${leshan.version}</version>
             </dependency>
 
             <!-- https://mvnrepository.com/artifact/org.mongodb/mongo-java-driver -->
@@ -84,6 +87,18 @@
                 <groupId>org.mongodb</groupId>
                 <artifactId>mongo-java-driver</artifactId>
                 <version>3.10.2</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>com.typesafe.akka</groupId>
+                <artifactId>akka-actor_${scala.version}</artifactId>
+                <version>${akka.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.typesafe.akka</groupId>
+                <artifactId>akka-slf4j_${scala.version}</artifactId>
+                <version>${akka.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
